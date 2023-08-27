@@ -2,8 +2,9 @@ package me.amuji;
 
 import org.json.JSONObject;
 
-public class JsonCreator {
-    public JSONObject from(String path, Object value) {
-        return new JSONObject();
-    }
+public interface JsonCreator {
+    JsonCreator put(String path, Object value);
+
+    JSONObject create();
+
 }
